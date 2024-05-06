@@ -5,20 +5,22 @@
     <!-- HTML E CSS JUNTO PRA ARRUMAR DEPOIS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Smart Parking</title>
+    <link rel="icon" type="image/png" href="images/circulacoes.png">
     <style>
         /* CSS para arrumar depois pois esta bagunçado */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000;
+            /*background-color: #9a9a9a;*/
+            background-image: url(images/background1.png);
             color: #fff;
         }
         header {
             background-color: #333;
             color: #fff;
-            padding: 1px;
+            padding: 15px;
             text-align: center;
         }
         .container {
@@ -39,19 +41,24 @@
         .card {
             flex-basis: calc(20% - 10px); /*  largura dos cards para 20%  */
             background-color: #333;
-            padding: 20px;
+            padding: 15px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
             text-align: center;
         }
         .card h2 {
-            margin-top: 0;
+            margin-top: 10;
         }
         .car-image {
-            max-width: 100%;
+            max-width:80%;
             height: auto;
             border-radius: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+        }
+        .logo-image {
+            max-width:30%;
+            align-items: left;
+
         }
         .chart {
             max-width: 100%;
@@ -94,11 +101,23 @@
         .search-bar button:hover {
             background-color: #0056b3;
         }
+        .footer {
+            padding: 20px;
+            background-color: #333;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            position: static;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Controle de Estacionamento</h1>
+        <!--<div class="logo-image">
+            <img src="images/circulacoes.png " alt="logo" class="logo-image">
+        </div>-->
+        <h1>Dashboard do Estacionamento</h1>
         <div class="search-bar">
             <input type="text" placeholder="Pesquisar...">
             <button>Pesquisar</button>
@@ -108,47 +127,54 @@
         <div class="dashboard">
             <div class="card">
                 <h2>Vagas Totais</h2>
-                <img src="vagas_totais_livres_e_ocupadas.gif" alt="Carro" class="car-image">
+                <img src="images/vagas_totais.png" alt="Carro" class="car-image">
                 <p>100</p>
             </div>
             <div class="card">
                 <h2>Vagas Ocupadas</h2>
-                <img src="ocupado.png" alt="Carro" class="car-image">
+                <img src="images/vagas_ocupadas.png" alt="Carro" class="car-image">
                 <p>70</p>
             </div>
             <div class="card">
                 <h2>Vagas Livres</h2>
-                <img src="livre.png" alt="Carro" class="car-image">
+                <img src="images/vagas_livres.png" alt="Carro" class="car-image">
                 <p>30</p>
             </div>
             <div class="card">
                 <h2>Faturamento Mensal</h2>
-                <img src="dinheiro.gif" alt="Carro" class="car-image">
+                <img src="images/faturamento.png" alt="Carro" class="car-image">
                 <p>R$ 50.000,00</p>
             </div>
             <div class="card">
                 <h2>Tempo Médio de Permanência</h2>
-                <img src="tempo.gif" alt="Carro" class="car-image">
+                <img src="images/tempo_medio.png" alt="Carro" class="car-image">
                 <p>2 horas</p>
             </div>
             <div class="card">
                 <h2>Horário de Entrada e Saída</h2>
-                <img src="tempo.gif" alt="Carro" class="car-image">
+                <img src="images/circulacoes.png" alt="Carro" class="car-image">
                 <p>08:00 - 18:00</p>
             </div>
             <div class="card">
                 <h2>Placa dos Carros</h2>
-                <img src="placas.gif" alt="Carro" class="car-image">
+                <img src="images/placas.gif" alt="Carro" class="car-image">
                 <p>ABC-1234, DEF-5678, GHI-9101</p>
             </div>
             <div class="card">
                 <h2>Horários Movimentados</h2>
-                <img src="grafico.jpg" alt="Gráfico" class="chart">
+                <img src="images/grafico.jpg" alt="Gráfico" class="chart">
             </div>
             <!-- COLOCAR MAIS CARDS SE PRECISAR -->
         </div>
     </div>
+    <footer class="footer">
+       <!-- <div class="logo-image">
+            <img src="images/circulacoes.png " alt="logo" class="logo-image">
+        </div>-->
+        <h1>Smart Parking</h1>
+        <p>Desenvolvedores:</p>
+        <p>Felipe Tiroleza, Henrique Ribeiro e Rafael Elias</p>
+        <p>&copy; 2024 Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
-
-
